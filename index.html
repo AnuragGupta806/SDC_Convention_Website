@@ -27,6 +27,9 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/timeline.css" rel="stylesheet">
+  <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  
 </head>
 
 <body>
@@ -307,7 +310,8 @@
     </section>
     <section id="timeline" class="wow fadeInUp">
     <!-- <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=146XRXOQxQmEokg4_L9Eva2mcH6rWDOmF4hbFHbaNoBk&font=Default&lang=en&initial_zoom=2&height=660' width='100%' height='660' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe> -->
-    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1DjpNTNXicNNZ7pdFVbqoek88J5k9kT_2OnggkjgHvSQ&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+    <!-- <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1DjpNTNXicNNZ7pdFVbqoek88J5k9kT_2OnggkjgHvSQ&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe> -->
+    <div id='timeline-embed' style="width: 100%; height: 650px"></div>
     </section>
     <!--==========================
       Moderators Section
@@ -760,6 +764,8 @@
     <script src="lib/venobox/venobox.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
     <!-- Contact Form JavaScript File -->
     <script src="contactform/contactform.js"></script>
     <script src="js/custom.js" type="text/javascript"></script>
@@ -767,6 +773,16 @@
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+      var additionalOptions = {
+          font: 'lustria-lato'
+      }
+
+      timeline = new TL.Timeline('timeline-embed',
+      'https://docs.google.com/spreadsheets/d/1DjpNTNXicNNZ7pdFVbqoek88J5k9kT_2OnggkjgHvSQ/pubhtml',
+      additionalOptions);
+  </script>
 </body>
 
 </html>
